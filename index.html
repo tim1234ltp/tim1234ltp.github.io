@@ -222,7 +222,7 @@
 </div>
 
 <!-- Container (Section 1) -->
-<div id="sec1" class="container-fluid">
+<div id="about" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
       <h2>About this</h2><br>
@@ -243,7 +243,7 @@
   </div>
 </div>
 
-<div id="api" class="container-fluid bg-grey">
+<div id="search" class="container-fluid bg-grey">
   <h2 class="text-center">Try it NOW</h2>
   <div class="row">
     <div class="col-md-12 slideanim">
@@ -252,32 +252,75 @@
           <input class="form-control" id="product" name="product" placeholder="Product" type="text" required>
         </div>
         <div class="col-md-2 form-group">
-          <button class="btn btn-default" type="submit" onclick="test()">Ask The Price</button>
+          <button class="btn btn-default" type="submit" onclick="callSearchAPI()">Ask The Price</button>
         </div>
-        <div id="result">          
+        <div id="result" style="display:none">          
         </div>
     </div>
   </div>
+  <br>
+  <p id="resultTitle"></p>
+  <p id="cat"></p>
 
-  <script>
-      function test() {
-        var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-        var xhttp = new XMLHttpRequest();
+  
 
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("result").innerHTML =
-            this.responseText;
-          }
-        };
+<script>
 
-        var url = "http://139.162.30.171:5000/hackathon?product=" + document.getElementById("product").value;
-        xhttp.open("GET", url);
-        xhttp.send();
+    function callSearchAPI() {
+
+      var xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("result").innerText =
+            this.responseText;        
+            document.getElementById("resultTitle").innerText="Category:"
+        }
+      };
+
+      var url = "http://139.162.30.171:5000/hackathon?product=" + document.getElementById("product").value;
+      xhttp.open("GET", url);
+      xhttp.send();
+
+      var myO = JSON.parse(document.getElementById("result").innerText);
+      alert('Finish Searching');
+      var arr = filter_by_type(myO);
+      var mySet = new Set (arr);
+      mySet.forEach(function(value) {
+        document.getElementById("cat").innerText+="\n";
+        document.getElementById("cat").innerText+=value;
+
+      });
+
+    }
+    
+
+    function filter_by_type(json){
+
+        var typesArr = [];
+
+
+        for (var i=0, l = json.length ; i<l ; ++i){
+
+          keys = Object.keys(json[i]);
+
+          for(var j=0; j < keys.length; j++)
+          {
+
+            if(keys[j] == "TYPE_EN"){
+              typesArr.push(json[i].TYPE_EN);
+              break;
+            }
+          }          
+
+        }  
+        return typesArr;
       }
-      </script>
+
+</script>
 
 </div>
+
 
 <script>
 $(document).ready(function(){
@@ -314,14 +357,6 @@ $(document).ready(function(){
     });
   });
 })
-
-$("#result").change(function(){
-    if(document.getElementById("result").value=="[]"){
-      alert("BOOM");
-    }
-  })
-
-
 </script>	
 
 </body>
