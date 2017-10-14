@@ -262,8 +262,9 @@
 
   <script>
       function test() {
+        var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
         var xhttp = new XMLHttpRequest();
-        xhttp.withCredentials = true;
+
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
             document.getElementById("test").innerHTML =
@@ -272,8 +273,9 @@
         };
 
         var url = "https://139.162.30.171:5000/hackathon?product=" + document.getElementById("product").value;
-        xhttp.open("GET", url, true);
+        xhttp.open("GET", cors_api_url + url);
         xhttp.setRequestHeader("origin", "https://tim1234ltp.github.io");
+        xhttp.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         //xhttp.setRequestHeader("password", "g5324hjkyui12");
         xhttp.send();
       }
