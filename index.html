@@ -254,8 +254,7 @@
         <div class="col-md-2 form-group">
           <button class="btn btn-default" type="submit" onclick="test()">Ask The Price</button>
         </div>
-        <div id="test">
-          test
+        <div id="result">          
         </div>
     </div>
   </div>
@@ -267,7 +266,7 @@
 
         xhttp.onreadystatechange = function() {
           if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("test").innerHTML =
+            document.getElementById("result").innerHTML =
             this.responseText;
           }
         };
@@ -315,6 +314,14 @@ $(document).ready(function(){
     });
   });
 })
+
+$("#result").change(function(){
+    if(document.getElementById("result").value=="[]"){
+      alert("BOOM");
+    }
+  })
+
+
 </script>	
 
 </body>
