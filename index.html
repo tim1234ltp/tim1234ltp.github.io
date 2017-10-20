@@ -3,197 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
+  
+  <link href="custom.css" rel="stylesheet" type="text/css" />
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <meta name="description" content="HKUCS Hackathon Template Page">
+  
+  <meta name="description" content="Tim's personal HOME PAGE">
   <meta name="author" content="Tim">
-  <title>HKUCS Hackathon 14Oct2017</title>
-	
-<style>
-  p {
-    font-size: 130%;
-  }
-  body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-  }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-  }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }  
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid #f4511e; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
-      background-color: #fff !important;
-      color: #f4511e;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #f4511e !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #f4511e;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-</style>	
+  <title>Tim's Space</title>
 </head>
 <body id="page-top">
 
@@ -205,145 +29,116 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#page-top">Shut Up And Save My Money</a>
+      <a class="navbar-brand" href="#page-top">Tim's Space</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">What is this?</a></li>
-		<li><a href="#search">Search Your Item</a></li>
+	  	<li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="jumbotron text-center">
-  <h1>Save your money</h1> 
-  <p>Data + Price Watch = Profit of the day</p> 
+<div id="home" class="jumbotron text-center">
+  <h1>Hi, I'm Tim</h1> 
+  <h1>and I love to start things from 0</h1>
+  <p style="font-size:50%">(which include counting array element)</p>
 </div>
 
-<!-- Container (Section 1) -->
-<div id="about" class="container-fluid">
+<!-- Container (Section About) -->
+<div id="about" class="container-fluid bg-blue">
   <div class="row">
-    <div class="col-sm-8">
-      <h2>About this</h2><br>
-      <p>
-        Buy groceries. Daily quests for everyone.<br><br>
-      </p>
-
-      <p>
-        We believe that there should be no more manual price comparing.<br>
-        Going through all the nearby supermarkets for the cheapest toliet paper?<br><br>
-        <strong>No MORE!</strong><br><br>
-        This is a price watch application to help you decide where to buy your desired items with cheaper price and shorter travel distance.
-      </p>
+  	<h2>About Me</h2><br>
+    <div class="col-sm-10 slideanim">      
+		<h3 class="well well-lg text-primary">
+		You can call me Tim. <br>
+		I am currently a Computer Science sophomore in The University of Hong Kong, <br>
+		walking step-by-step towards a better version of myself. <br>
+		Just like writing code, there is always an improved verson. <br>
+		<strong>Starting from 0 says nothing about the array length. </strong><br>
+		</h3>
+		<h3 class="well well-lg text-success">
+		My Interests: <br>
+		hiking<i class="fi-mountains"></i> <br>
+		running<i class="material-icons">directions_run</i> <br>
+		cooking<i class="fa fa-cutlery"></i> <br>
+		deep learning<i class="ionicons ion-network"></i> <br>
+		gaming<i class="fa fa-gamepad"></i> <br>
+		<br>
+		<br>		
+		What I hate: <br>
+		<del>insects</del> <br>
+		<del>non-sense product managers and sales team</del> <br>
+		<del>spaghetti code from others</del> <br>		
+		</h3>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-shopping-cart logo"></span>
-    </div>
+	<div class="col-sm-2 slideanim">
+	<img src="images/pp.jpg" height="375" width="200" onclick="alert('Hey, don\'t touch my face, plz')">
+	</div>
   </div>
 </div>
 
-<div id="search" class="container-fluid bg-grey">
-  <h2 class="text-center">Try it NOW</h2>
+<div id="skills" class="container-fluid bg-grey">
+  <h2 class="text-center">This is how I spend the points on skill tree:</h2>
   <div class="row">
     <div class="col-md-12 slideanim">
-      <div class="row">
-        <div class="col-md-10 form-group">
-          <input class="form-control" id="product" name="product" placeholder="Product" type="text" required>
-        </div>
-        <div class="col-md-2 form-group">
-          <button class="btn btn-default" type="submit" onclick="callSearchAPI()">Ask The Price</button>
-        </div>
-        <div id="result" style="display:none">          
-        </div>
-    </div>
+	<p>Wow</p>
+	</div>
   </div>
   <br>
-  <p id="resultTitle"></p>
-  <p id="cat"></p>
-
-  
-
-<script>
-
-    function callSearchAPI() {
-
-      var xhttp = new XMLHttpRequest();
-
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("result").innerText =
-            this.responseText;        
-            document.getElementById("resultTitle").innerText="Category:"
-        }
-      };
-
-      var url = "http://139.162.30.171:5000/hackathon?product=" + document.getElementById("product").value;
-      xhttp.open("GET", url);
-      xhttp.send();
-
-      var myO = JSON.parse(document.getElementById("result").innerText);
-      alert('Finish Searching');
-      var arr = filter_by_type(myO);
-      var mySet = new Set (arr);
-      mySet.forEach(function(value) {
-        document.getElementById("cat").innerText+="\n";
-        document.getElementById("cat").innerText+=value;
-
-      });
-
-    }
-    
-
-    function filter_by_type(json){
-
-        var typesArr = [];
-
-
-        for (var i=0, l = json.length ; i<l ; ++i){
-
-          keys = Object.keys(json[i]);
-
-          for(var j=0; j < keys.length; j++)
-          {
-
-            if(keys[j] == "TYPE_EN"){
-              typesArr.push(json[i].TYPE_EN);
-              break;
-            }
-          }          
-
-        }  
-        return typesArr;
-      }
-
-</script>
-
 </div>
 
+<div id="contact" class="container-fluid">
+  <h2 class="text-center">Contact Me:</h2>  
+
+    <div class="col-md-12 text-center slideanim">
+	<h3>
+  	<i class="glyphicon glyphicon-envelope"></i>
+  	Email:  
+  	<a href="mailto:tim1234.ltp@gamil.com">tim1234.ltp@gmail.com</a>
+ 	</h3>	
+	<h3>
+  	<i class="fa fa-twitter"></i>
+  	<a href="https://twitter.com/tim1234_ltp?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Twitter</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+ 	</h3>	
+	<h3>
+  	<i class="fa fa-linkedin"></i>
+	<a href="https://linkedin.com/in/tim-po-lam">LinkedIn</a>
+ 	</h3>	
+	<h3>
+  	<i class="fa fa-github"></i>
+	<a href="https://github.com/tim1234ltp">Github</a>
+ 	</h3>	
+	</div>
+
+  <br>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="#page-top" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
 
 <script>
 $(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#page-top']").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
+
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
+
       event.preventDefault();
 
-      // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
+	  $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
    
-        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
   
   $(window).scroll(function() {
